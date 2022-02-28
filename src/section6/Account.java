@@ -8,6 +8,18 @@ public class Account {
     private String customerEmailAddress;
     private String customerPhoneNumber;
 
+    public Account() {
+        this("12345", 20.0, "Default Name", "Default Address", "Default Number");
+        System.out.println("default customer is created!!!!");
+    }
+
+    public Account(String number, double balance, String customerName, String customerEmailAddress, String customerPhoneNumber) {
+        this.number = number;
+        this.balance = balance;
+        this.customerName = customerName;
+        this.customerEmailAddress = customerEmailAddress;
+        this.customerPhoneNumber = customerPhoneNumber;
+    }
 
     public void deposit(double depositAmount) {
         balance += depositAmount;

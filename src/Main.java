@@ -44,7 +44,7 @@ public class Main {
             person.setLastName("Smith");    // lastName is set to Smith
             System.out.println("fullName= " + person.getFullName());
 
-            Account bobsAccount = new Account();
+            Account bobsAccount = new Account("12345", 10.0, "Test", "test mail", "1234 ");
             bobsAccount.withdrawal(100.0);
 
             bobsAccount.deposit(50.);
@@ -52,6 +52,17 @@ public class Main {
 
             bobsAccount.deposit(51.0);
             bobsAccount.withdrawal(100.0);
+            System.out.println(bobsAccount.getCustomerName());
+
+            Account bobsAccount2 = new Account();
+            bobsAccount2.withdrawal(100.0);
+
+            bobsAccount2.deposit(50.);
+            bobsAccount2.withdrawal(100.0);
+
+            bobsAccount2.deposit(51.0);
+            bobsAccount2.withdrawal(100.0);
+            System.out.println(bobsAccount2.getCustomerName());
 
         }
     }
